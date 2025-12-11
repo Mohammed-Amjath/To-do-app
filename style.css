@@ -1,0 +1,97 @@
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0; /* prevents huge whitespace */
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.85); /* soft glass effect */
+  backdrop-filter: blur(10px);           /* modern blur */
+  padding: 200px;                        /* your size kept */
+  width: 380px;                          /* your size kept */
+  border-radius: 50px;                   /* your size kept */
+  box-shadow: 
+      0 10px 30px rgba(0,0,0,0.20),      /* deeper shadow */
+      0 0 20px rgba(255,255,255,0.4) inset; /* inner glow */
+  border: 2px solid rgba(255,255,255,0.4);
+  animation: fadeIn 0.6s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.container:hover {
+  box-shadow: 
+      0 15px 35px rgba(0,0,0,0.25),
+      0 0 25px rgba(255,255,255,0.5) inset;
+  transform: translateY(-5px);
+}
+
+
+.input-area {
+  display: flex;
+  margin-bottom: 100px; /* your size kept */
+}
+
+#taskInput {
+  flex: 1;
+  padding: 12px; /* your size kept */
+  border: 2px solid #d0d0d0;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#taskInput:focus {
+  border-color: #0b84ff;
+  box-shadow: 0 0 8px rgba(11,132,255,0.3);
+}
+
+#addBtn {
+  padding: 30px 50px; /* your size kept */
+  background: #0b84ff;
+  color: #fff;
+  margin-left: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#addBtn:hover {
+  background: #006fe6;
+  transform: scale(1.05);
+}
+
+li {
+  list-style: none;
+  background: #f5f7fa;
+  padding: 12px; /* your size kept */
+  margin: 8px 0; /* your size kept */
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+li:hover {
+  transform: translateX(5px);
+  background: #eef3ff;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
